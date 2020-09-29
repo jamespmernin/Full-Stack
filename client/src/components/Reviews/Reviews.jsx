@@ -7,7 +7,7 @@ const Reviews = (props) => {
     const reviewsJSX = props.reviews.map((review, index) =>
         <div className="product-review" key={index}>
             <h1>{review.author}</h1>
-            <StarRating size={review.rating} value={review.rating} />
+            <StarRating size={review.rating} value={review.rating} onChange={ function(val) { console.log(val) }} />
             <p>{review.description}</p>
         </div>
     )
