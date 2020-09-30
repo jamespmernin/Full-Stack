@@ -16,6 +16,12 @@
     padding: 5px;
 }
 
+.rating {
+    font-size: 64px;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
 .price {
     font-size: 28px;
 }

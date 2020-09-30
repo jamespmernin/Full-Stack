@@ -5,6 +5,8 @@ import { getProduct, deleteProduct, updateProduct } from '../../services/product
 import { useParams, Link } from 'react-router-dom'
 import ReviewForm from '../../components/ReviewForm/ReviewForm'
 import Reviews from '../../components/Reviews/Reviews'
+import StarRating from 'star-rating-react'
+
 const ProductDetail = () => {
 
     const [product, setProduct] = useState({
@@ -56,6 +58,7 @@ const ProductDetail = () => {
                 <img className="product-detail-image" src={product.imgURL} alt={product.name} />
                 <div className="detail">
                     <div className="name">{product.name}</div>
+                    <div className="rating"><StarRating size={product.rating} value={product.rating} onChange={ function(val) { console.log(val) }} /></div>
                     <div className="price">{`$${product.price}`}</div>
                     <div className="description">{product.description}</div>
                     <div className="button-container">
